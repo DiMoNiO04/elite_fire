@@ -1,9 +1,7 @@
 body{
-	background: url('./assets/img/svg/Rectangle.jpg');
+	background: url('./assets/img/Rectangle.jpg');
 	max-width: 1440px;
-	height: 2000px;
 	margin: 0 auto;
-	line-height: 1;
 	@include fonts(normal, 300, 18px, 33px, $lab, #FFFFFF)
 }
 
@@ -30,7 +28,7 @@ h1, h2, h3, ul, li, p{
 
 .background{
 	background: #1B1B1A;
-	height: 100%;
+	height: auto;
 }
 
 
@@ -95,3 +93,59 @@ h1, h2, h3, ul, li, p{
 	}
 }
 //--------Header end-------------
+
+
+
+//---------Biofireplace start--------
+.biofireplace{
+	padding-top: 227px;
+	&__container{
+		display: flex
+	}
+}
+
+
+.biofireplace__title{
+	@include fonts(normal, 300, 64px, 80px, $lab,  #FFFFFF);
+	letter-spacing: 0.05em;
+	display: inline-block;
+	text-transform: uppercase;
+	background: linear-gradient(200.43deg, #FFFFFF 49.37%, rgba(255, 255, 255, 0) 99.78%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	margin-bottom: 29px;
+}
+
+.biofireplace__price{
+	@include fonts(normal, 300, 18px, 40px, $lab,   #FFCF7A);
+	letter-spacing: 0.05em;
+	margin-bottom: 86px;
+	span{
+		font-size: 36px;
+		padding-left: 4px
+	}
+}
+
+.biofireplace__icons{
+	@include flexs(inline-flex, row, flex-start, center);
+	column-gap: 80px;
+	.biofireplace__icon{
+		@include flexs(flex, column, center, center);
+		row-gap: 14px;
+		img{
+			width: 30px;
+		}
+		p{
+			@include fonts(normal, 400, 14px, 22px, $lab,  #FFFFFF);
+			text-align: center;
+		}
+	}
+}
+
+.biofireplace__kamin{
+	position: relative;
+	right: 11%;
+}
+
+//---------Biofireplace end-----------
