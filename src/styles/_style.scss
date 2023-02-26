@@ -1,0 +1,97 @@
+body{
+	background: url('./assets/img/svg/Rectangle.jpg');
+	max-width: 1440px;
+	height: 2000px;
+	margin: 0 auto;
+	line-height: 1;
+	@include fonts(normal, 300, 18px, 33px, $lab, #FFFFFF)
+}
+
+.container{
+	margin: 0 auto;
+	max-width: 1220px;
+	padding: 0 13px;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+li{
+	list-style-type: none;
+}
+
+h1, h2, h3, ul, li, p{
+	margin: 0;
+	padding: 0;
+}
+
+.background{
+	background: #1B1B1A;
+	height: 100%;
+}
+
+
+//---------Header start----------
+.header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	&__container,
+	&__logos,
+	&__menu,
+	&__items{
+		@include flexs(flex, row, space-between, center)
+	}
+}
+
+.header__container{
+	padding-top: 76px;
+}
+
+.header__logos{
+	column-gap: 37px;
+	.header__logo{
+		@include fonts(normal, 400, 20px, 70px, $scaniaHeadline, #FFFFFF);
+		letter-spacing: 0.105em;
+		&:hover{
+			@extend %hover;
+			transform: scale(1.1);
+		}
+	}
+	.header__logo-desc{
+		@include fonts(normal, 400, 12px, 18px, $lab,  #6D6D6D);
+		letter-spacing: 0.05em;
+	}
+}
+
+.header__menu{
+	column-gap: 61px;
+	.header__items{
+		column-gap: 43px;
+		.header__link{
+			@include fonts(normal, 400, 13px, 16px, $lab,   #949494);
+			text-align: right;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			&:hover{
+				color: #FFCF7A;
+				@extend %hover;
+			}
+		}
+	}
+	.header__phone{
+		max-width: 50px;
+		max-height: 50px;
+		&:hover{
+			@extend %hover;
+			transform: scale(1.1);
+		}
+	}
+}
+//--------Header end-------------
