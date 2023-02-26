@@ -31,10 +31,21 @@ h1, h2, h3, ul, li, p{
 	height: auto;
 }
 
+.title{
+	@include fonts(normal, 300, 40px, 60px, $lab,   transparent);
+	text-align: center;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	background: linear-gradient(195.22deg, #FFFFFF 31.8%, rgba(255, 255, 255, 0) 87.73%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
 
 //---------Header start----------
 .header{
-	position: fixed;
+	position: relative;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -149,3 +160,58 @@ h1, h2, h3, ul, li, p{
 }
 
 //---------Biofireplace end-----------
+
+
+
+//--------Fire start---------------
+.fire{
+	padding-top: 227px;
+	padding-bottom: 400px;
+	.container{
+		max-width: 1315px;
+	}
+	&__container{
+		@include flexs(flex, column, flex-start, stretch);
+	}
+}
+
+.fire__title{
+	margin: 0 auto;
+	max-width: 690px;
+	margin-bottom: 21px
+}
+
+.fire__desc{
+	@include fonts(normal, 300, 20px, 33px, $lab,  #FFFFFF);
+	text-align: center;
+	letter-spacing: 0.03em;
+	max-width: 570px;
+	margin: 0 auto;
+}
+
+.fire__items{
+	@include flexs(flex, row, space-around, stretch);
+	.fire__item{
+		@include flexs(flex, row, space-around, stretch);
+		column-gap: 29px;
+		.fire__icon-close{
+			width: 40px;
+			height: 40px;
+		}
+		
+		.fire__icon-fire{
+			width: 46px;
+			height: 46px;
+		}
+		
+		.fire__icon-drop{
+			width: 50px;
+			height: 50px;
+		}
+		.fire__item-desc{
+			@include fonts(normal, 300, 16px, 24px, $lab,  #FFFFFF);
+			max-width: 177px;
+		}
+	}
+}
+//--------Fire end----------------
