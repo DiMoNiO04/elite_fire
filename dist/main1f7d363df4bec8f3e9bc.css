@@ -348,4 +348,4 @@ template {
   display: none;
 }
 
-
+@font-face{font-family:"Scania Sans CY Headline";font-style:normal;font-weight:400;src:url(assets/fonts/ScaniaSansCYHeadline-Regular.woff) format("woff")}@font-face{font-family:"Scania Sans CY";font-style:normal;font-weight:400;src:url(assets/fonts/ScaniaSansCY-Regular.woff) format("woff")}@font-face{font-family:"Scania Sans CY";font-style:normal;font-weight:700;src:url(assets/fonts/ScaniaSansCY-Bold.woff) format("woff")}@font-face{font-family:"Lab Grotesque";font-style:normal;font-weight:300;src:url(assets/fonts/LabGrotesque-Light.woff) format("woff")}@font-face{font-family:"Lab Grotesque";font-style:normal;font-weight:400;src:url(assets/fonts/LabGrotesque-Regular.woff) format("woff")}@font-face{font-family:"Lab Grotesque";font-style:normal;font-weight:500;src:url(assets/fonts/LabGrotesque-Medium.woff) format("woff")}
