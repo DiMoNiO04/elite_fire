@@ -375,7 +375,6 @@ h1, h2, h3, ul, li, p{
 //------Catalog start-------------
 .catalog__container{
 	padding-top: 43px;
-	padding-bottom: 300px;
 	@include flexs(flex, column, flex-start, stretch);
 }
 
@@ -491,3 +490,32 @@ h1, h2, h3, ul, li, p{
 }
 //------Catalog end--------------
 
+
+
+//-------Questions start----------
+.questions__container{
+	padding-top: 130px;
+	@include flexs(flex, column, flex-start, stretch);
+	row-gap: 90px;
+}
+
+.question{
+	@include flexs(flex, column, flex-start, stretch);
+	row-gap: 45px;
+}
+
+.question__title{
+	@include fonts(normal, 300, 40px, 55px, $lab, transparent);
+	text-align: center;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	background: linear-gradient(249.07deg, #FFFFFF 36.17%, rgba(255, 255, 255, 0) 97.71%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.question__images{
+	@include flexs(flex, row, space-between, center);
+}
+//-------Questions end------------
