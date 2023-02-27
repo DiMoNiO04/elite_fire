@@ -42,6 +42,25 @@ h1, h2, h3, ul, li, p{
 	background-clip: text;
 }
 
+.button{
+	@include fonts(normal, 500, 18px, 30px, $lab, #121212);
+	text-align: center;
+	background: #ECCF94;
+	border-radius: 1px;
+	&:hover{
+		@extend %hover;
+		background: #FFCF7A;
+	}
+}
+
+.arrow-left{
+	background: url('./assets/img/svg/arrow-left.svg');
+ }
+
+.arrow-right{
+	background: url('./assets/img/svg/arrow-right.svg');
+ }
+
 
 //---------Header start----------
 .header{
@@ -477,15 +496,7 @@ h1, h2, h3, ul, li, p{
 		text-align: center;
 	}
 	.catalog__button{
-		@include fonts(normal, 500, 18px, 30px, $lab, #121212);
-		text-align: center;
-		background: #ECCF94;
-		border-radius: 1px;
 		padding: 13px 62px;
-		&:hover{
-			@extend %hover;
-			background: #FFCF7A;
-		}
 	}
 }
 //------Catalog end--------------
@@ -519,3 +530,191 @@ h1, h2, h3, ul, li, p{
 	@include flexs(flex, row, space-between, center);
 }
 //-------Questions end------------
+
+
+
+//---------Order start-------------
+.order__container{
+	padding: 94px 0 107px 0;
+	@include flexs(flex, column, flex-start, stretch);
+	row-gap: 67px;
+}
+
+.order__main-content{
+	@include flexs(flex, row, flex-start, center);
+	column-gap: 85px;
+}
+
+.order__subtitle{
+	@include fonts(normal, 500, 12px, 55px, $lab,  rgba(255, 255, 255, 0.5));
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+.order__request{
+	@include flexs(flex, column, flex-start, stretch);
+	.order__size,
+	.order__functions{
+  		@include flexs(flex, column, flex-start, stretch);
+	}
+}
+
+.subtitle__length{
+	line-height: 35px
+}
+
+.order__progress{
+	@include flexs(inline-flex, row, space-between, center);
+	column-gap: 39px;
+	span{
+		@include fonts(normal, 500, 18px, 35px, $lab, #FFFFFF);
+		text-align: center;
+	}
+	.order__progress-bar{
+		position: relative;
+		height: 2px;
+		background-color: #646464;;
+		cursor: pointer;
+		width: 100%;
+		.order__active{
+			position: absolute;
+			left: 0;
+			display: inline-block;
+			height: 2px;
+			width: 70%;
+			transition: all;
+			background-color: #FFCF7A;
+			&::after{
+				content: "";
+				position: absolute;
+				left: 100%;
+				width: 30px;
+				bottom: -15px;
+				height: 30px;
+				background-color: #FFCF7A;
+			 }
+		}
+	 }
+ }
+
+ .order__carousel{
+	@include flexs(inline-flex, column, flex-start, stretch);
+	row-gap: 16px;
+	.order__images{
+		@include flexs(inline-flex, row, flex-start, center);
+		column-gap: 22px;
+		button:hover{
+			transform: scale(1.5);
+			@extend %hover;
+		}
+	 }
+	 .order__dots{
+		@include flexs(inline-flex, row, center, center);
+		column-gap: 4px;
+		.order__dot{
+			width: 9px;
+			border: 1px solid #464239;
+			&_active{
+				border: 1px solid #FFCF7A;
+			}
+			&:hover{
+				@extend %hover;
+			}
+		 }
+	 }
+ }
+
+ .order__arrow{
+	width: 18px;
+	height: 18px;
+	border: none;
+}
+
+
+
+.order__list{
+	@include flexs(flex, row, space-between, center);
+	column-gap: 143px;
+	.order__item{
+		@include flexs(flex, row, space-between, center);
+		column-gap: 85px;
+		label{
+			@include fonts(normal, 500, 14px, 30px, $lab, #FFFFFF);
+		}
+	}
+}
+
+.order__desc{
+	@include flexs(flex, row, space-between, center);
+	.order__lengths span{
+		@include fonts(normal, 400, 24px, 42px, $lab, #FFFFFF);
+	}
+	.order__color div{
+		display: inline-block;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		background: #B8542A;
+	}
+	.order__price span{
+		@include fonts(normal, 300, 36px, 40px, $lab, #FFCF7A);
+		letter-spacing: 0.05em;
+	}
+	.order__button{
+		padding: 13px 54px;
+	}
+	
+}
+
+
+.order__checkbox{
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.order__checkbox+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+	column-gap: 85px;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.order__checkbox+label::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border: 1px solid #CEB787;
+	border-radius: 2px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+	order: 1;
+ }
+
+ .order__checkbox+label:hover{
+	cursor: pointer;
+ }
+
+ .order__checkbox:checked+label::before {
+	border-color:  #ECCF94;
+	background-color:  #ECCF94;
+	background-image: url("./assets/img/svg/plus.svg");
+ }
+
+ .order__checkbox:not(:disabled):not(:checked)+label:hover::before {
+	border-color: #ECCF94;
+	cursor: pointer;
+ }
+
+ .order__checkbox:not(:disabled):active+label::before {
+	background-color: #ECCF94;
+	border-color:  #ECCF94;
+	cursor: pointer;
+ }
+//---------Order end----------------
