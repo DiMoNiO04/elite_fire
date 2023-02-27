@@ -794,3 +794,28 @@ h1, h2, h3, ul, li, p{
 	}
 }
 //-------Conection end-------------
+
+
+
+//-------Footer start--------------
+.footer{
+	background: #121212;
+	span{
+		@include fonts(normal, 400, 14px, 18px, $lab,  #6D6D6D);
+	}
+}
+
+.footer__container{
+	padding: 35px 0;
+	@include flexs(flex, row, space-between, center);
+}
+
+.footer__logo{
+	@include fonts(normal, 400, 14px, 18px, $scaniaHeadline,  #FFFFFF);
+}
+
+.footer__data{
+	@include flexs(flex, row, space-between, center);
+	column-gap: 47px;
+}
+//-------Footer end----------------
