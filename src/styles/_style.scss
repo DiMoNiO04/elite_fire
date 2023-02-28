@@ -40,6 +40,8 @@ h1, h2, h3, ul, li, p{
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	position: relative;
+	z-index: 2;
 }
 
 .button{
@@ -51,6 +53,12 @@ h1, h2, h3, ul, li, p{
 		@extend %hover;
 		background: #FFCF7A;
 	}
+}
+
+.arrow{
+	width: 18px;
+	height: 18px;
+	border: none;
 }
 
 .arrow-left{
@@ -80,6 +88,8 @@ h1, h2, h3, ul, li, p{
 
 .header__container{
 	padding-top: 76px;
+	flex-wrap: wrap;
+	column-gap: 80px;
 }
 
 .header__logos{
@@ -100,6 +110,7 @@ h1, h2, h3, ul, li, p{
 
 .header__menu{
 	column-gap: 61px;
+	flex-wrap: wrap;
 	.header__items{
 		column-gap: 43px;
 		.header__link{
@@ -128,9 +139,23 @@ h1, h2, h3, ul, li, p{
 
 //---------Biofireplace start--------
 .biofireplace{
+	position: relative;
+	z-index: 1;
 	&__container{
-		padding-top: 227px;
-		display: flex
+		padding-top: 98px;
+		display: flex;
+	}
+	.bg{
+		position: absolute;
+		z-index: -1;
+		width: 870px;
+		height: 927px;
+		left: -190px;
+		top: 30px;
+		background: #000000;
+		filter: blur(250px);
+		border-radius: 300px;
+		transform: rotate(45deg);
 	}
 }
 
@@ -178,6 +203,35 @@ h1, h2, h3, ul, li, p{
 	right: 11%;
 }
 
+.biofireplace__kamin-images{
+	position: relative;
+	z-index: 1;
+	.first__bg{
+		position: absolute;
+		width: 300px;
+		height: 150px;
+		top: 100px;
+		left: 100px;
+		z-index: -1;
+		background: #A74E02;
+		filter: blur(100px);
+		border-radius: 500px;
+		transform: rotate(161.87deg);
+	}
+	.second__bg{
+		position: absolute;
+		width: 200px;
+		height: 87px;
+		background: #FFCF7A;
+		filter: blur(50px);
+		border-radius: 500px;
+		transform: rotate(161.87deg);
+		top: 59px;
+		left: 240px;
+		z-index: -1;
+	}
+}
+
 //---------Biofireplace end-----------
 
 
@@ -205,6 +259,8 @@ h1, h2, h3, ul, li, p{
 	letter-spacing: 0.03em;
 	max-width: 570px;
 	margin: 0 auto;
+	position: relative;
+	z-index: 2;
 }
 
 .fire__items{
@@ -217,12 +273,10 @@ h1, h2, h3, ul, li, p{
 			width: 40px;
 			height: 40px;
 		}
-		
 		.fire__icon-fire{
 			width: 46px;
 			height: 46px;
 		}
-		
 		.fire__icon-drop{
 			width: 50px;
 			height: 50px;
@@ -231,6 +285,79 @@ h1, h2, h3, ul, li, p{
 			@include fonts(normal, 300, 16px, 24px, $lab,  #FFFFFF);
 			max-width: 177px;
 		}
+	}
+}
+
+.fire__images{
+	position: relative;
+	z-index: 1;
+	.first__bg{
+		position: absolute;
+		width: 826px;
+		height: 551px;
+		left: 320px;
+		top: -120px;
+		z-index: -1;
+		background: #392924;
+		filter: blur(150px);
+		border-radius: 300px;
+	}
+	.second__bg{
+		position: absolute;
+		width: 508px;
+		height: 339px;
+		left: 400px;
+		z-index: -1;
+		top: 0;
+		background: rgba(255, 209, 128, 0.23);
+		filter: blur(75px);
+		border-radius: 300px;
+	}
+	.third__bg{
+		position: absolute;
+		width: 508px;
+		height: 499px;
+		left: 160px;
+		z-index: -1;
+		top: 70px;
+		background: rgba(255, 209, 128, 0.23);
+		filter: blur(125px);
+		border-radius: 300px;
+		transform: rotate(135deg);
+	}
+	.four__bg{
+		position: absolute;
+		width: 354px;
+		height: 349px;
+		left: 475px;
+		top: -55px;
+		z-index: -1;
+		background: rgba(245, 157, 93, 0.45);
+		filter: blur(125px);
+		border-radius: 300px;
+		transform: rotate(135deg);
+	}
+	.five__bg{
+		position: absolute;
+		width: 214px;
+		height: 132px;
+		left: 565px;
+		z-index: -1;
+		top: 200px;
+		background: rgba(255, 207, 122, 0.72);
+		filter: blur(75px);
+		border-radius: 300px;
+	}
+	.six__bg{		
+		position: absolute;
+		width: 156px;
+		height: 96px;
+		left: 380px;
+		top: 215px;
+		z-index: -1;
+		background: rgba(255, 155, 82, 0.71);
+		filter: blur(50px);
+		border-radius: 300px;
 	}
 }
 //--------Fire end----------------
@@ -245,6 +372,17 @@ h1, h2, h3, ul, li, p{
 		@include flexs(flex, column, flex-start, stretch);
 		row-gap: 90px;
 		margin-left: 83px;
+	}
+	.bg{
+		position: absolute;
+		width: 623px;
+		height: 927px;
+		left: -140px;
+		top: 80px;
+		background: #000000;
+		filter: blur(250px);
+		border-radius: 300px;
+		transform: rotate(45deg);
 	}
 }
 
@@ -290,6 +428,44 @@ h1, h2, h3, ul, li, p{
 	}
 }
 
+.refueling__images{
+	.first__bg{
+		position: absolute;
+		width: 163px;
+		height: 198px;
+		right: 115px;
+		top: 25px;
+		background: rgba(255, 207, 122, 0.72);
+		filter: blur(75px);
+		border-radius: 300px;
+		transform: matrix(-0.94, 0.35, 0.35, 0.94, 0, 0);
+	}
+	.second__bg{
+		position: absolute;
+		width: 269px;
+		height: 385px;
+		right: 180px;
+		top: -30px;
+		background: rgba(201, 115, 53, 0.45);
+		filter: blur(75px);
+		border-radius: 300px;
+		transform: matrix(0.31, -0.95, -0.95, -0.31, 0, 0);
+	}
+	.third__bg{
+		position: absolute;
+		width: 335px;
+		height: 420px;
+		right: 0px;
+		top: 0px;
+		right: -30px;
+		top: -90px;
+		background: rgba(175, 152, 112, 0.34);
+		filter: blur(75px);
+		border-radius: 300px;
+		transform: matrix(0.92, 0.39, 0.39, -0.92, 0, 0);
+	}
+}
+
 .image__refueling{
 	position: absolute;
 	top: -225px;
@@ -310,6 +486,7 @@ h1, h2, h3, ul, li, p{
 
 .images__circle{
 	position: absolute;
+	z-index: 1;
 	width: 151px;
 	height: 151px;
 	border-radius: 50%;
@@ -419,6 +596,8 @@ h1, h2, h3, ul, li, p{
 	display: flex;
 	column-gap: 90px;
 	margin-top: 16px;
+	position: relative;
+	z-index: 1;
 }
 
 .catalog__equipment{
@@ -465,6 +644,8 @@ h1, h2, h3, ul, li, p{
 
 .catalog__title-block{
 	@include fonts(normal, 400, 18px, 27px, $lab, #6D6D6D);
+	position: relative;
+	z-index: 1;
 }
 
 .catalog__solutions-accessories{
@@ -487,6 +668,22 @@ h1, h2, h3, ul, li, p{
 	}
 }
 
+.catalog__image-kamin{
+	position: relative;
+	z-index: 1;
+	.first__bg{
+		z-index: -1;
+		position: absolute;
+		width: 570px;
+		height: 284px;
+		left: 0;
+		top: 125px;
+		background: #000000;
+		filter: blur(100px);
+		border-radius: 300px;
+	}
+}
+
 .catalog__desc-button{
 	@include flexs(flex, column, center, center);
 	margin-top: 106px;
@@ -497,6 +694,40 @@ h1, h2, h3, ul, li, p{
 	}
 	.catalog__button{
 		padding: 13px 62px;
+	}
+}
+
+.catalog__btn, 
+.order__btn{
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	.first__bg{
+		position: absolute;
+		width: 184px;
+		height: 124px;
+		left: 0;
+		top: 0;
+		background: linear-gradient(270.21deg, rgba(249, 139, 77, 0.8) 18.08%, rgba(255, 103, 82, 0.8) 68.72%);
+		filter: blur(25px);
+	}
+	.second__bg{
+		filter: blur(66px);
+		position: absolute;
+		width: 184px;
+		height: 124px;
+		left: 145px;
+		top: -60px;
+		background: linear-gradient(270.21deg, rgba(255, 217, 196, 0.8) 18.08%, rgba(255, 255, 255, 0.8) 68.72%);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+	span{
+		position: relative;
+		z-index: 1;
+	}
+	&:hover{
+		@extend %hover;
+		transform: scale(1.1);
 	}
 }
 //------Catalog end--------------
@@ -623,14 +854,6 @@ h1, h2, h3, ul, li, p{
 		 }
 	 }
  }
-
- .order__arrow{
-	width: 18px;
-	height: 18px;
-	border: none;
-}
-
-
 
 .order__list{
 	@include flexs(flex, row, space-between, center);
